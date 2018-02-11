@@ -8197,6 +8197,10 @@ AFRAME.registerComponent('arjs-anchor', {
 				arProfile.defaultMarkerParameters.type = 'barcode'
 				arProfile.defaultMarkerParameters.barcodeValue = 1001	
 				arProfile.defaultMarkerParameters.markersAreaEnabled = true
+			}else if( _this.data.preset === 'cross' ){
+				arProfile.defaultMarkerParameters.type = 'pattern'
+				arProfile.defaultMarkerParameters.patternUrl = 'pattern-marker.patt'
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
 			}else {
 				// console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
 			}		
